@@ -1,0 +1,129 @@
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+@media (max-width: 599px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+.container-fluid {
+  max-width: 1344px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.main-button {
+  color: #222F33;
+  font-size: 16px;
+  background: #19FF85;
+  padding: 7px 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: linear 0.2s all;
+  position: relative;
+  z-index: 10;
+}
+.main-button--mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .main-button--mobile {
+    display: block;
+  }
+}
+.main-button--rounded {
+  border-radius: 60px;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.main-button--rounded.active {
+  background: #21654E;
+  color: white;
+  transition: linear 0.2s all;
+}
+.main-button--rounded:hover {
+  background: #222F33 !important;
+  transition: linear 0.2s all;
+}
+.main-button:hover {
+  transition: linear 0.2s all;
+  background: #4A575B;
+  color: white;
+}
+.main-button:focus {
+  background: #21654E;
+  transition: linear 0.2s all;
+  color: white;
+}
+@media (max-width: 600px) {
+  .main-button {
+    font-size: 14px;
+  }
+}
+
+a.share-button.click:after {
+  z-index: 1;
+}
+
+.share-button::after {
+  content: "Copied!"; /* translate */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #333;
+  color: #ccc;
+  padding: 4px 6px;
+  border-radius: 3px;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0;
+  transform: translateY(0);
+  z-index: -1;
+}
+
+.share-button.click::after {
+  animation: flash 1s;
+}
+
+.share-button {
+  position: relative;
+}
+
+ul#privacy_menu {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  ul#privacy_menu {
+    display: block;
+  }
+}
+@keyframes flash {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}/*# sourceMappingURL=general.css.map */

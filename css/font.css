@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "mediasans-bold";
+  src: url("../font/mediasansweb-bold.woff2") format("woff2"), url("../font/mediasansweb-bold.woff") format("woff");
+}
+@font-face {
+  font-family: "mediasans-regular";
+  src: url("../font/mediasansweb-regular.woff2") format("woff2"), url("../font/mediasansweb-regular.woff") format("woff");
+}/*# sourceMappingURL=font.css.map */

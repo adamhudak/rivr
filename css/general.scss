@@ -1,0 +1,154 @@
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    @media (max-width:599px){
+        padding: 0 15px;
+    }
+    @media (max-width:450px){
+        padding: 0 12px;
+    }
+    &-fluid{
+        max-width: 1344px;
+        margin: auto;
+        padding: 0 20px;
+    }
+}
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+.main-button{
+    color:#222F33;
+    font-size: 16px;
+    background:#19FF85;
+    padding: 7px 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: linear 0.2s all;
+    position: relative;
+    z-index: 10;
+    &--mobile{
+      display: none;
+      @media (max-width:600px){
+        display: block;
+       
+     }
+    }
+    &--rounded{
+        border-radius: 60px;
+        font-size: 16px;
+        padding: 10px 20px;
+        cursor: pointer;
+        &.active{
+            background:#21654E;
+            color:white;
+            transition: linear 0.2s all;
+        }
+        &:hover{
+            background:#222F33 !important;
+            transition: linear 0.2s all;
+        }
+       
+    }
+    &:hover{
+        transition: linear 0.2s all;
+        background:#4A575B;
+        color:white;
+    }
+    &:focus{
+        background:#21654E;
+        transition: linear 0.2s all;
+        color:white;
+    }
+    @media (max-width:600px){
+        font-size: 14px;
+       
+     }
+}
+
+a.share-button.click:after{
+    z-index: 1;
+}
+.share-button::after {
+    content: "Copied!"; /* translate */
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #333;
+    color: #ccc;
+    padding: 4px 6px;
+    border-radius: 3px;
+    width: fit-content;
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    z-index: -1;
+  }
+.share-button.click::after {
+    -webkit-animation: flash 1s;
+    -moz-animation: flash 1s;
+    -o-animation: flash 1s;
+    animation: flash 1s;
+  }
+  .share-button{
+    position: relative;
+  }
+
+ul#privacy_menu {
+    display: flex;
+    gap: 20px;
+    @media (max-width:600px){
+      display: block;
+     
+   }
+}
+
+@-webkit-keyframes flash {
+    from {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  }
+  @-moz-keyframes flash {
+    from {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes flash {
+    from {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  }
